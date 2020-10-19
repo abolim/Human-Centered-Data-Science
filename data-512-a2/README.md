@@ -44,24 +44,25 @@ Please visit the [Perspective API repository on GitHub](https://conversationai.g
 1. Is there fair representation of the different genders (male, female, other) in demographic profile of the crowdworkers who are labelling the comments as aggressive or toxic? 2. Do they fairly to represent the the general population?
 Are the comments are being distributed evenly across different genders (male, female and other) for a fair labelling exercise?
 
-**Exploratory Analysis**
-1. The distribution of workers by gender who are labelling the comments datasets
-2. The distribution of comments annotated by gender of the annotators
-
 **Analysis 2: Explore relationships between worker age groups and labeling behavior** <br>
 
 **Research Questions**
 1. Is there fair representation of the annotators across all age groups?
 2. Are younger labelers more or less likely to label comments as aggressive or toxic than older labelers?
 
-**Exploratory Analysis**
-1. The distribution of workers by age groups who are labelling the comments datasets
-2. The percentage of comments by workers across different age groups that have been labelled as aggressive/toxic
-
 The jupyter notebook containing the analysis code and outputs can be found [here](https://github.com/abolim/data-512/blob/master/data-512-a2/2-Analysis/hcds-a2-data-bias.ipynb)
 
 ## Outputs
-The outputs for the exploratory analysis 1 and analysis 2 can be found in the [3-Outputs directory](https://github.com/abolim/data-512/tree/master/data-512-a2/3-Outputs)
+The graphs for the exploratory analysis 1 and analysis 2 can be found in the [3-Outputs directory](https://github.com/abolim/data-512/tree/master/data-512-a2/3-Outputs)
+The analysis answers the research questions using the following approaches:
+
+**Exploratory Analysis 1**
+1. The distribution of workers by gender who are labelling the comments datasets
+2. The distribution of comments annotated by gender of the annotators
+
+**Exploratory Analysis 2**
+1. The distribution of workers by age groups who are labelling the comments datasets
+2. The percentage of comments by workers across different age groups that have been labelled as aggressive/toxic
 
 ## Licenses
 Please refer the LICENSE file with [MIT LICENSE](https://github.com/abolim/data-512/blob/master/LICENSE) for understanding the code of conduct
