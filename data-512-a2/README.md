@@ -38,15 +38,18 @@ The source data used for this analysis includes:
 Please visit the [Perspective API repository on GitHub](https://conversationai.github.io/) and [Wikimedia Research:Detox](https://meta.wikimedia.org/wiki/Research:Detox) to learn more about this project and its current applications.
 
 ## Analysis Research Questions
-**Analysis 1: Analyze the demographic information about the Crowdflower workers that is available in the dataset**
+**Analysis 1: Analyze the demographic information about the Crowdflower workers that is available in the dataset** <br>
+
 **Research Questions**
 1. Is there fair representation of the different genders (male, female, other) in demographic profile of the crowdworkers who are labelling the comments as aggressive or toxic? 2. Do they fairly to represent the the general population?
 Are the comments are being distributed evenly across different genders (male, female and other) for a fair labelling exercise?
+
 **Exploratory Analysis**
 1. The distribution of workers by gender who are labelling the comments datasets
 2. The distribution of comments annotated by gender of the annotators
 
-**Analysis 2: Explore relationships between worker age groups and labeling behavior**
+**Analysis 2: Explore relationships between worker age groups and labeling behavior** <br>
+
 **Research Questions**
 1. Is there fair representation of the annotators across all age groups?
 2. Are younger labelers more or less likely to label comments as aggressive or toxic than older labelers?
