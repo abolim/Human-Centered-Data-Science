@@ -1,52 +1,65 @@
 # DATA 512 Assignment A2: Bias in Data
 Author: Aboli Moroney
-Date Created: 04-Oct-2020
+Date Created: 15-Oct-2020
 
 ## Purpose
-The goal of this assignment is to ...
-All analysis is performed the in the Jupyter notebook and all data, documentation, and code is published in this GitHub repository.
+The goal of this assignment is to identify potential sources of bias in a corpus of human-annotated data and describe some implications of those biases.
+The analysis is performed the using the Jupyter notebook and all data, documentation, code and outputs are published in this GitHub repository for reference.
 
 ## Directory Structure
+```
+data-512-a2
+│   README.md    
+└───1-Data
+│   │   data_aggression_annotated_comments.tsv
+│   │   data_aggression_annotations.tsv
+│   │	data_aggression_worker_demographics.tsv
+|   |	data_toxicity_annotated_comments.tsv
+|   |	data_toxicity_annotations.tsv
+|   |	data_toxicity_worker_demographics.tsv
+└───2-Analysis
+|   │   hcds-a2-data-bias.ipynb
+└───3-Outputs
+|   │   Analysis1_CommentsReviewedbyGender.png
+|   │   Analysis1_WorkersbyGender.png
+|   │   Analysis2_PercentCommentsbyAge.png
+|   │   Analysis2_WorkersbyAge.png
+    
+```
 
+## Data Sources
 
-## Data Sources and Licenses
-In order to measure Wikipedia traffic from 2008-2020, I have collected data from two different API endpoints, the Legacy Pagecounts API and the Pageviews API.
+Source data for Aggression and Toxicity in Wikipedia Talk project can be found on [Figshare](https://figshare.com/projects/Wikipedia_Talk/16731) and the schema and descriptions can be found [here](https://meta.wikimedia.org/wiki/Research:Detox/Data_Release).
 
-1.  The Legacy Pagecounts API ([documentation](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end)) provides access to desktop and mobile traffic data from December 2007 through July 2016.
-2.  The Pageviews API ([documentation ](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), [endpoint](https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through last month.
+The source data used for this analysis includes:
+1. Aggression: 100k labeled comments from English Wikipedia by approximately 10 annotators via Crowdflower on how aggressive the comment was perceived to be along with some demographic data for each crowd-worker.
+2. Toxicity: 160k labeled comments from English Wikipedia by approximately 10 annotators via Crowdflower on a spectrum of how toxic the comment is (perceived as likely to 	make people want to leave the discussion) to how healthy to conversation the contribution is.
 
-Please find Wikimedia Foundation REST API terms of use [here](https://www.mediawiki.org/wiki/Wikimedia_REST_API#Terms_and_conditions)
+Please visit the [Perspective API repository on GitHub](https://conversationai.github.io/) and [Wikimedia Research:Detox](https://meta.wikimedia.org/wiki/Research:Detox) to learn more about this project and its current applications.
 
-## Data Files and Code
-The following source data files in JSON format contain the raw data fetched from the above APIs: <br>
-	1. pagecounts_desktop-site_200801-201607.json <br>
-	2. pagecounts_mobile-site_200801-201607.json <br>
-	3. pageviews_desktop-site_201507-202008.json <br>
-	4. pageviews_mobile-web_201507-202008.json <br>
-	5. pageviews_mobile-app_201507-202008.json <br><br>
+## Analysis Research Questions
+**Analysis 1: Analyze the demographic information about the Crowdflower workers that is available in the dataset**
+**Research Questions**
+1. Is there fair representation of the different genders (male, female, other) in demographic profile of the crowdworkers who are labelling the comments as aggressive or toxic? 2. Do they fairly to represent the the general population?
+Are the comments are being distributed evenly across different genders (male, female and other) for a fair labelling exercise?
+**Exploratory Analysis**
+1. The distribution of workers by gender who are labelling the comments datasets
+2. The distribution of comments annotated by gender of the annotators
 
-The final data used for the analysis is saved in a csv file: **en-wikipedia_traffic_200712-202008.csv** <br>
+**Analysis 2: Explore relationships between worker age groups and labeling behavior**
+**Research Questions**
+1. Is there fair representation of the annotators across all age groups?
+2. Are younger labelers more or less likely to label comments as aggressive or toxic than older labelers?
 
-The code for data collection, processing and analysis can be found in the Jupyter Notebook: **data-512-a1-code.ipynb** <br>
-*Please refer the LICENSE file with **MIT LICENSE** for understanding the code of conduct*
+**Exploratory Analysis**
+1. The distribution of workers by age groups who are labelling the comments datasets
+2. The percentage of comments by workers across different age groups that have been labelled as aggressive/toxic
+
+The jupyter notebook containing the analysis code and outputs can be found [here](https://github.com/abolim/data-512/blob/master/data-512-a2/2-Analysis/hcds-a2-data-bias.ipynb)
 
 ## Outputs
-
-**1. Final Data CSV File** 
-Filename: en-wikipedia_traffic_200712-202008.csv
-	Contains: 152 rows of data (excluding headers) ranging from 01 Jan 2008 to 31 Aug 2020. The column headers are as follows:
-	year (int64): Year of traffic data <br>
-	month (int64): Month of traffic data <br>
-	pagecount_all_views (float64): Total page counts (traffic) from legacy API <br>
-	pagecount_desktop_views (float64): Desktop page counts (traffic) from legacy API <br>
-	pagecount_mobile_views (float64): Mobile page counts (traffic) from legacy API <br>
-	pageview_all_views (float64): Total page views from current API <br>
-	pageview_desktop_views (float64): Desktop  page views from current API <br>
-	pageview_mobile_views (float64): Mobile (web + app) page views from current API <br>
-
-
-**2. Image of Time Series Chart**
-Filename: PageViews_TimeSeries_Plot.png <br>
-Contains: A multi-series line chart to show the traffic from different sources (web, mobile and total) over time. <br>
+The outputs for the exploratory analysis 1 and analysis 2 can be found in the [3-Outputs directory](https://github.com/abolim/data-512/tree/master/data-512-a2/3-Outputs)
 
 ## Licenses
+Please refer the LICENSE file with [MIT LICENSE](https://github.com/abolim/data-512/blob/master/LICENSE) for understanding the code of conduct
+
