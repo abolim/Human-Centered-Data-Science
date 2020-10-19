@@ -65,5 +65,5 @@ The analysis answers the research questions using the following approaches:
 2. The percentage of comments by workers across different age groups that have been labelled as aggressive/toxic
 
 ## Licenses
-Please refer the LICENSE file with [MIT LICENSE](https://github.com/abolim/data-512/blob/master/LICENSE) for understanding the code of conduct
+Please refer the LICENSE file with [MIT LICENSE](https://github.com/abolim/data-512/blob/master/data-512-a2/LICENSE) for understanding the code of conduct
 
