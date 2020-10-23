@@ -52,6 +52,15 @@ Are the comments are being distributed evenly across different genders (male, fe
 
 The jupyter notebook containing the analysis code and outputs can be found [here](https://github.com/abolim/data-512/blob/master/data-512-a2/2-Analysis/hcds-a2-data-bias.ipynb)
 
+## Dependencies
+The Jupyter Notebook imports the following libaries to carry out the analysis:
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import StrMethodFormatter
+from  matplotlib.ticker import PercentFormatter
+
 ## Outputs
 The graphs for the exploratory analysis 1 and analysis 2 can be found in the [3-Outputs directory](https://github.com/abolim/data-512/tree/master/data-512-a2/3-Outputs)
 The analysis answers the research questions using the following approaches:
